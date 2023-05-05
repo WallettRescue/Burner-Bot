@@ -4,6 +4,9 @@ import { gasPriceToGwei } from "./utils.js";
 
 import "log-timestamp";
 import "dotenv/config";
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
 
 const NETWORK_RPC_URL = process.env.BSC_RPC_URL;
 const PRIVATE_KEY_ZERO_GAS = process.env.PRIVATE_KEY_ZERO_GAS || "";
